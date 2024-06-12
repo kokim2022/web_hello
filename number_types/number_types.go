@@ -2,7 +2,7 @@ package number_types
 
 import "fmt"
 
-func PrintHello() {
+func PrintInteger() {
 	var i int = 590
 	var f int32 = 545
 	// float32 is used to covert integer into the float32
