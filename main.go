@@ -1,16 +1,17 @@
 package main
 
 import (
-	"github.com/kokim2020/web_hello/learn_if_for"
+	"github.com/kokim2020/web_hello/number_types"
+	"github.com/kokim2020/web_hello/switch_statements"
 )
 
 /*
 All Go programs start running from a function called `main` in a package called `main`
 */
 func main() {
-	// number_types.PrintInteger()
+	number_types.PrintInteger()
 	// learn_strings.LearnStrings()
-	learn_if_for.LearnForRangeLoop()
+	switch_statements.Test()
 	// http.HandleFunc("/hello", func(rw http.ResponseWriter, req *http.Request) {
 	// 	name := req.URL.Query().Get("name")
 	// 	rw.Write([]byte(fmt.Sprintf("Hello, %s", name)))
