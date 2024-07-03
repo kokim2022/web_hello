@@ -10,7 +10,7 @@ All Go programs start running from a function called `main` in a package called 
 func main() {
 	// number_types.PrintInteger()
 	// learn_strings.LearnStrings()
-	learn_switch.LearnSwitch()
+	learn_switch.LearnSwitchWithBoolean()
 	// http.HandleFunc("/hello", func(rw http.ResponseWriter, req *http.Request) {
 	// 	name := req.URL.Query().Get("name")
 	// 	rw.Write([]byte(fmt.Sprintf("Hello, %s", name)))
