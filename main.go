@@ -1,5 +1,11 @@
 package main
 
+import (
+	"fmt"
+
+	"github.com/kokim2020/web_hello/learn_more_funcs"
+)
+
 /*
 All Go programs start running from a function called `main` in a package called `main`
 */
@@ -30,4 +36,8 @@ func main() {
 
 	// _, remainder = learn_funcs.DivAndRemainder(100, -100)
 	// fmt.Println(remainder)
+
+	myAddOne := learn_more_funcs.AddOne
+	fmt.Println(myAddOne(3))
+	fmt.Println(learn_more_funcs.AddOne(3))
 }
