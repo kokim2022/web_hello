@@ -17,6 +17,7 @@ func makeAdder(b int) func(int) int {
 //	 its return type is also a function
 func makeDoubler(f func(int) int) func(int) int {
 	return func(a int) int {
+		// run the function passed as a parameter
 		b := f(a)
 		return b * 2
 	}
