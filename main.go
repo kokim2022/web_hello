@@ -11,6 +11,17 @@ func makeAdder(b int) func(int) int {
 	}
 }
 
+// pass function as a variable
+//
+//	&
+//	 its return type is also a function
+func makeDoubler(f func(int) int) func(int) int {
+	return func(a int) int {
+		b := f(a)
+		return b * 2
+	}
+}
+
 func main() {
 	// number_types.PrintInteger()
 	// learn_strings.LearnStrings()
@@ -52,10 +63,14 @@ func main() {
 
 	// call first function
 	addOne := makeAdder(1)
-	addTwo := makeAdder(2)
+
+	// pass function as parameter
+	doubleAddone := makeDoubler(addOne)
+	fmt.Println(doubleAddone(1))
+	// addTwo := makeAdder(2)
 	// call second function
-	fmt.Println(addOne(1))
-	fmt.Println(addTwo(1))
+	// fmt.Println(addOne(1))
+	// fmt.Println(addTwo(1))
 
 	// learn_more_funcs.LearnMoreFunctions()
 }
