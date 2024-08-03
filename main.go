@@ -1,6 +1,6 @@
 package main
 
-import "github.com/kokim2020/web_hello/learn_more_funcs"
+import "fmt"
 
 /*
 All Go programs start running from a function called `main` in a package called `main`
@@ -37,9 +37,11 @@ func main() {
 	// fmt.Println(myAddOne(3))
 	// fmt.Println(learn_more_funcs.AddOne(3))
 
-	// myAddOne := func(a int) int {
-	// 	return a + 1
-	// }
-	// fmt.Println(myAddOne(3))
-	learn_more_funcs.LearnMoreFunctions()
+	b := 2
+	myAddOne := func(a int) {
+		b = a + b
+	}
+	myAddOne(6)
+	fmt.Println(b)
+	// learn_more_funcs.LearnMoreFunctions()
 }
