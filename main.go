@@ -5,6 +5,12 @@ import "fmt"
 /*
 All Go programs start running from a function called `main` in a package called `main`
 */
+func makeAdder(b int) func(int) int {
+	return func(a int) int {
+		return a + b
+	}
+}
+
 func main() {
 	// number_types.PrintInteger()
 	// learn_strings.LearnStrings()
@@ -43,5 +49,13 @@ func main() {
 	}
 	myAddOne(6)
 	fmt.Println(b)
+
+	// call first function
+	addOne := makeAdder(1)
+	addTwo := makeAdder(2)
+	// call second function
+	fmt.Println(addOne(1))
+	fmt.Println(addTwo(1))
+
 	// learn_more_funcs.LearnMoreFunctions()
 }
